@@ -37,6 +37,10 @@
     a{color:inherit}
     img,iframe{max-width:100%;display:block}
 
+    h1, h2, h3, p, a, strong, .label {
+      text-shadow: 0 1px 3px rgba(0,0,0,.12);
+    }
+
     .skip{
       position:absolute;
       left:-9999px;
@@ -160,7 +164,7 @@
       content:"";
       position:absolute;
       inset:0;
-      background:rgba(255,255,255,.62);
+      background:rgba(255,255,255,.75);
       z-index:0;
     }
 
@@ -228,9 +232,11 @@
       min-height:220px;
       display:flex;
       align-items:flex-end;
+      background: rgba(255,255,255,.88);
       background-size:cover;
       background-position:center;
       background-repeat:no-repeat;
+      backdrop-filter: blur(8px);
     }
 
     .card::before{
@@ -348,13 +354,14 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      gap: 1rem;
       min-height: 260px;
     }
 
     #thanks .thanks-image {
       width: min(220px, 60vw);
       height: auto;
-      margin: 0 auto 1rem;
+      margin: 0 auto;
       display: block;
       animation: floatPulse 3.6s ease-in-out infinite;
       filter: drop-shadow(0 10px 18px rgba(15,42,31,.18));
