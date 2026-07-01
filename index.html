@@ -220,9 +220,6 @@
 
     .card{
       position:relative;
-      background-size:cover;
-      background-position:center;
-      background-repeat:no-repeat;
       border:1px solid rgba(29,58,43,.07);
       border-radius:16px;
       padding:1rem;
@@ -231,6 +228,9 @@
       min-height:220px;
       display:flex;
       align-items:flex-end;
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
     }
 
     .card::before{
@@ -287,10 +287,11 @@
       font-size:.95rem;
     }
 
-    .hero-section{background-image:url("images/1.png");}
+    .hero-section{background-image:url("images/1.jpg");}
     .details-section{background-image:url("images/2.jpeg");}
-    .location-section{background-image:url("images/3.webp");}
+    .location-section{background-image:url("images/3.jpg");}
     .registry-section{background-image:url("images/4.jpg");}
+    .thanks-section{background-image:url("images/1.jpg");}
 
     footer{
       max-width:var(--max);
@@ -366,6 +367,7 @@
         <li><a href="#details">Details</a></li>
         <li><a href="#location">Location</a></li>
         <li><a href="#registry">Gifts</a></li>
+        <li><a href="#thanks">Thank You</a></li>
       </ul>
     </nav>
   </header>
@@ -428,6 +430,15 @@
             <p>Your presence is our greatest gift. However, if you would like to honour us with a gift, a card box will be available for contributions towards our next adventure together.</p>
           </div>
           <p class="note" style="margin-top:1rem;"></p>
+        </div>
+      </section>
+
+      <section id="thanks" class="thanks-section">
+        <div class="content">
+          <h2 class="section-title">Thank You</h2>
+          <div class="card">
+            <p>Thank you for being part of this beautiful celebration and for sharing in our joy.</p>
+          </div>
         </div>
       </section>
     </main>
