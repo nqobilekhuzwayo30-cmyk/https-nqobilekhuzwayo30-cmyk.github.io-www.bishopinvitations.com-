@@ -150,6 +150,23 @@
       border-radius:var(--radius);
       box-shadow:var(--shadow);
       overflow:hidden;
+      position:relative;
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
+
+    section::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(255,255,255,.62);
+      z-index:0;
+    }
+
+    section > *{
+      position:relative;
+      z-index:1;
     }
 
     .hero{
@@ -270,10 +287,10 @@
       font-size:.95rem;
     }
 
-    .card1{background-image:url("images/1.png");}
-    .card2{background-image:url("images/2.jpeg");}
-    .card3{background-image:url("images/3.webp");}
-    .card4{background-image:url("images/4.jpg");}
+    .hero-section{background-image:url("images/1.png");}
+    .details-section{background-image:url("images/2.jpeg");}
+    .location-section{background-image:url("images/3.webp");}
+    .registry-section{background-image:url("images/4.jpg");}
 
     footer{
       max-width:var(--max);
@@ -301,10 +318,7 @@
 
       .content{padding:1.25rem 1.25rem 1.4rem}
       .details-grid{
-        grid-template-columns:1.1fr .9fr;
-      }
-      .grid.two{
-        grid-template-columns:1fr 1fr;
+        grid-template-columns:1fr;
       }
       .hero{
         min-height:72vh;
@@ -359,7 +373,7 @@
   <div class="hero-wrap">
     <div class="botanical" aria-hidden="true"></div>
     <main id="main">
-      <section class="hero" id="hero" aria-labelledby="title">
+      <section class="hero hero-section" id="hero" aria-labelledby="title">
         <div>
           <p class="eyebrow">~ ♡ ~</p>
           <h1 id="title">25 Wonderful Years of Marriage</h1>
@@ -369,29 +383,17 @@
         </div>
       </section>
 
-      <section id="details">
+      <section id="details" class="details-section">
         <div class="content">
           <h2 class="section-title">Event Details</h2>
           <div class="details-grid">
-            <div class="card card1"></div>
-
-            <div class="card card2">
+            <div class="card">
               <div class="detail">
                 <span class="label">Date</span>
                 <strong>Saturday, 29 August 2026</strong>
-              </div>
-            </div>
-
-            <div class="card card3">
-              <div class="detail">
-                <span class="label">Time</span>
+                <span class="label" style="margin-top:.75rem;">Time</span>
                 <strong>6:00 pm</strong>
-              </div>
-            </div>
-
-            <div class="card card4">
-              <div class="detail">
-                <span class="label">Dress Code</span>
+                <span class="label" style="margin-top:.75rem;">Dress Code</span>
                 <strong>Brilliantly Elegant</strong>
                 <p>Come celebrate with us in your favorite shade starting with a “B”. Brown, Beige, Black, Blue, Bronze, Blush, Burgundy.</p>
               </div>
@@ -400,7 +402,7 @@
         </div>
       </section>
 
-      <section id="location">
+      <section id="location" class="location-section">
         <div class="content">
           <h2 class="section-title">Location</h2>
           <div class="card">
@@ -419,7 +421,7 @@
         </div>
       </section>
 
-      <section id="registry">
+      <section id="registry" class="registry-section">
         <div class="content">
           <h2 class="section-title">Gifts</h2>
           <div class="card">
