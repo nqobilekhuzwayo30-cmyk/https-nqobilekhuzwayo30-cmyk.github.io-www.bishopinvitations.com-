@@ -203,25 +203,22 @@
 
     .card{
       position:relative;
-      min-height:260px;
       background-size:cover;
       background-position:center;
       background-repeat:no-repeat;
       border:1px solid rgba(29,58,43,.07);
       border-radius:16px;
-      overflow:hidden;
       padding:1rem;
       text-align:center;
-      display:flex;
-      align-items:flex-end;
+      overflow:hidden;
     }
 
     .card::before{
       content:"";
       position:absolute;
       inset:0;
-      background:rgba(255,255,255,.58);
-      backdrop-filter:blur(2px);
+      background:rgba(255,255,255,.55);
+      z-index:0;
     }
 
     .card > *{
@@ -270,10 +267,21 @@
       font-size:.95rem;
     }
 
-    .img-card-1{background-image:url("images/1.png");}
-    .img-card-2{background-image:url("images/2.jpeg");}
-    .img-card-3{background-image:url("images/3.webp");}
-    .img-card-4{background-image:url("images/4.jpg");}
+    .card1{
+      background-image:url("images/1.png");
+    }
+
+    .card2{
+      background-image:url("images/2.jpeg");
+    }
+
+    .card3{
+      background-image:url("images/3.webp");
+    }
+
+    .card4{
+      background-image:url("images/4.jpg");
+    }
 
     footer{
       max-width:var(--max);
@@ -373,28 +381,28 @@
         <div class="content">
           <h2 class="section-title">Event Details</h2>
           <div class="details-grid">
-            <div class="card img-card-1">
+            <div class="card card1">
               <div class="detail">
                 <span class="label">Celebration</span>
                 <strong>Karl & Jacqueline - 25th Anniversary Celebration</strong>
               </div>
             </div>
 
-            <div class="card img-card-2">
+            <div class="card card2">
               <div class="detail">
                 <span class="label">Date</span>
                 <strong>Saturday, 29 August 2026</strong>
               </div>
             </div>
 
-            <div class="card img-card-3">
+            <div class="card card3">
               <div class="detail">
                 <span class="label">Time</span>
                 <strong>6:00 pm</strong>
               </div>
             </div>
 
-            <div class="card img-card-4">
+            <div class="card card4">
               <div class="detail">
                 <span class="label">Dress Code</span>
                 <strong>Brilliantly Elegant</strong>
