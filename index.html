@@ -22,10 +22,21 @@
     }
 
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
+    html{
+      scroll-behavior:smooth;
+      min-height:100%;
+    }
+
     body{
       margin:0;
-      background:var(--cream);
+      min-height:100vh;
+      background:
+        linear-gradient(rgba(253,251,247,.82), rgba(253,251,247,.82)),
+        url("images/6.jpg");
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+      background-attachment:fixed;
       color:var(--green);
       font-family:"Cinzel", serif;
       -webkit-font-smoothing:antialiased;
@@ -164,7 +175,7 @@
       content:"";
       position:absolute;
       inset:0;
-      background:rgba(255,255,255,.80);
+      background:rgba(255,255,255,.72);
       z-index:0;
     }
 
@@ -495,7 +506,7 @@
           <p class="eyebrow">~ ♡ ~</p>
           <h1 id="title">25 Wonderful Years of Marriage</h1>
           <div class="hero-inner-card">
-            <img class="hero-card-image" src="./images/5.jpg" alt="Decorative celebration image">
+            <img class="hero-card-image" src="./images/6.jpg" alt="Decorative celebration image">
             <p>Twenty-Five Years of Love</p>
             <p>~ ♡ ~</p>
             <p>Our Love Story Continues...</p>
