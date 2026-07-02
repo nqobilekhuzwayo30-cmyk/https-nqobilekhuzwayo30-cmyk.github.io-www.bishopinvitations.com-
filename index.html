@@ -14,6 +14,7 @@
     :root{
       --cream:#FDFBF7;
       --green:#0F2A1F;
+      --green-light:#4F6458;
       --silver:#4F6458;
       --card:rgba(255,255,255,.80);
       --shadow:0 10px 30px rgba(15,42,31,.08);
@@ -52,7 +53,7 @@
     }
 
     a{color:inherit}
-    img,iframe{max-width:100%;display:block}
+    img,iframe,video{max-width:100%;display:block}
 
     h1, h2, h3, p, a, strong, .label {
       text-shadow: 0 1px 3px rgba(0,0,0,.10);
@@ -207,7 +208,7 @@
       font-family:"Great Vibes", cursive;
       font-size:clamp(1.5rem, 4vw, 2.6rem);
       margin:0 0 .35rem;
-      color:var(--silver);
+      color:var(--green-light);
     }
 
     h1, h2, h3{
@@ -219,6 +220,7 @@
       font-size:clamp(2rem, 7vw, 4.8rem);
       letter-spacing:.02em;
       text-wrap:balance;
+      color:var(--green-light);
     }
 
     .content{
@@ -331,13 +333,18 @@
       box-shadow: 0 12px 28px rgba(15,42,31,.10);
     }
 
-    .hero-card-image{
-      width: min(180px, 50vw);
-      height: auto;
+    .hero-media{
+      width: min(240px, 90%);
       margin: 0 auto 1rem;
-      display: block;
-      filter: drop-shadow(0 10px 18px rgba(15,42,31,.18));
-      animation: floatPulse 3.6s ease-in-out infinite;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 10px 18px rgba(15,42,31,.16);
+    }
+
+    .hero-media video{
+      width:100%;
+      height:auto;
+      display:block;
     }
 
     .hero-inner-card p{
@@ -472,7 +479,12 @@
           <p class="eyebrow">~ ♡ ~</p>
           <h1 id="title">25 Wonderful Years of Marriage</h1>
           <div class="hero-inner-card">
-            <img class="hero-card-image" src="./images/6.jpg" alt="Decorative celebration image">
+            <div class="hero-media">
+              <video controls playsinline preload="metadata">
+                <source src="./video/1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
             <p>Twenty-Five Years of Love</p>
             <p>~ ♡ ~</p>
             <p>Our Love Story Continues...</p>
@@ -567,4 +579,4 @@
     });
   </script>
 </body>
-</html>
+</html>3.
